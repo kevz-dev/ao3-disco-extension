@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "AO3 Disco",
+    "description": "Discover similar works on Archive Of Our Own.",
+    "version": "0.1",
+    "icons": {
+        "128": "images/favicon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "128": "images/favicon.png"
+        }
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://archiveofourown.org/works/*"
+            ]
+        }
+    ]
+}
